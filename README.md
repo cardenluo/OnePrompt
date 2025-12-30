@@ -4,11 +4,11 @@
 
 <img width="386" height="772" alt="image" src="https://github.com/user-attachments/assets/255720d1-8d9c-4930-9181-6ea82f6f352c" />
 
-我会对应谷歌商店的填写项，帮你整理内容：
+
 
 ### 1. 说明（截图里的“说明*”输入框）
-直接复制这段：
-“OnePrompt是一款高效的提示词管理工具，让你在豆包、ComfyUI、Claude、Gemini等任意AI平台无缝管理提示词：
+
+OnePrompt是一款高效的提示词管理工具，让你在豆包、ComfyUI、Claude、Gemini等任意AI平台无缝管理提示词：
 
 ✅ 多平台兼容：跨AI工具同步保存/插入提示词
 
