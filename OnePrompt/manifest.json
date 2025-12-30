@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "name": "OnePrompt",
+  "version": "1.0.0",
+  "description": "通用提示词管理工具,支持快捷键弹窗、批量导入导出CSV、右键收藏",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OnePrompt",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "toggle-popup": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "windows": "Alt+Q",
+        "mac": "Alt+Q"
+      },
+      "description": "打开/关闭提示词弹窗"
+    },
+    "save-selection": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "windows": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "收藏选中文本为提示词"
+    }
+  }
+}

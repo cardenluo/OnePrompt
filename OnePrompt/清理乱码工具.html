@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>积木提示词 - 清理乱码工具</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #374151;
+    }
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-right: 10px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+    }
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+    .info-box {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+    .status.success {
+      background: #d1fae5;
+      color: #065f46;
+      display: block;
+    }
+    .status.error {
+      background: #fee2e2;
+      color: #991b1b;
+      display: block;
+    }
+    .prompt-list {
+      max-height: 400px;
+      overflow-y: auto;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    .prompt-item {
+      padding: 10px;
+      background: #f9fafb;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .prompt-info {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 积木提示词清理工具</h1>
+    <p class="subtitle">清理导入CSV时产生的乱码提示词</p>
+
+    <div class="info-box">
+      <strong>⚠️ 使用说明:</strong><br>
+      1. 此工具可以查看和清理所有提示词<br>
+      2. 如果发现乱码提示词,可以单独删除或全部清空<br>
+      3. 清空后可以重新导入正确编码的CSV文件
+    </div>
+
+    <div class="section">
+      <h2>当前提示词列表</h2>
+      <button class="btn btn-primary" onclick="loadPrompts()">🔄 刷新列表</button>
+      <button class="btn btn-danger" onclick="clearAll()">🗑️ 清空所有</button>
+      <div id="prompt-list" class="prompt-list" style="margin-top: 15px;">
+        <p style="color: #9ca3af;">点击"刷新列表"查看提示词</p>
+      </div>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script>
+    function loadPrompts() {
+      chrome.storage.local.get(['prompts'], (result) => {
+        const prompts = result.prompts || [];
+        const listDiv = document.getElementById('prompt-list');
+        
+        if (prompts.length === 0) {
+          listDiv.innerHTML = '<p style="color: #9ca3af;">暂无提示词</p>';
+          return;
+        }
+
+        listDiv.innerHTML = prompts.map(prompt => `
+          <div class="prompt-item">
+            <div class="prompt-info">
+              <strong>${escapeHtml(String(prompt.title || '未命名').substring(0, 50))}</strong><br>
+              <small style="color: #6b7280;">
+                分类: ${escapeHtml(String(prompt.category || '无'))} | 
+                ID: ${prompt.id}
+              </small>
+            </div>
+            <button class="btn btn-danger" onclick="deletePrompt(${prompt.id})" style="margin: 0;">删除</button>
+          </div>
+        `).join('');
+
+        showStatus(`📊 共 ${prompts.length} 条提示词`, 'success');
+      });
+    }
+
+    function deletePrompt(id) {
+      if (!confirm('确定删除这条提示词吗?')) return;
+
+      chrome.storage.local.get(['prompts'], (result) => {
+        const prompts = result.prompts || [];
+        const filtered = prompts.filter(p => p.id !== id);
+        chrome.storage.local.set({ prompts: filtered }, () => {
+          showStatus('✅ 删除成功', 'success');
+          loadPrompts();
+        });
+      });
+    }
+
+    function clearAll() {
+      if (!confirm('⚠️ 确定要清空所有提示词吗?\n\n此操作不可恢复!')) return;
+      if (!confirm('🚨 最后确认: 真的要删除所有提示词吗?')) return;
+
+      chrome.storage.local.set({ prompts: [] }, () => {
+        showStatus('✅ 已清空所有提示词', 'success');
+        loadPrompts();
+      });
+    }
+
+    function showStatus(message, type) {
+      const statusDiv = document.getElementById('status');
+      statusDiv.textContent = message;
+      statusDiv.className = `status ${type}`;
+      
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 3000);
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // 页面加载时自动刷新
+    window.onload = loadPrompts;
+  </script>
+</body>
+</html>
