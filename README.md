@@ -24,14 +24,13 @@
 
 使用方法：
 1. 点扩展图标开面板，导入/导出提示词建库
-2. 
-3. 设快捷键（Alt+Q调面板、Alt+S存提示词）
-4. 
-5. 输入框按Alt+Q插提示词，网页未选输入框时Alt+Q调侧边栏
-6. 
-7. 主面板支持批量删/导，创建提示词可同步类型/分类
-8. 
 
+2. 设快捷键（Alt+Q调面板、Alt+S存提示词）
+   
+3. 输入框按Alt+Q插提示词，网页未选输入框时Alt+Q调侧边栏
+   
+4. 主面板支持批量删/导，创建提示词可同步类型/分类
+   
 适用于AI爱好者、内容创作者、开发者、研究员等所有AI工具用户，让AI交互更高效！”
 
 "OnePrompt is an efficient prompt management tool that lets you seamlessly organize prompts across AI platforms like Doubao, ComfyUI, Claude, Gemini, and more:
