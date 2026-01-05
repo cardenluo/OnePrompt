@@ -19,11 +19,8 @@
 
 
 
-<img width="640" height="400" alt="image" src="https://github.com/user-attachments/assets/d3f8472e-88ce-48f7-b4ba-413601480717" />
 
-<img width="386" height="772" alt="image" src="https://github.com/user-attachments/assets/255720d1-8d9c-4930-9181-6ea82f6f352c" />
-
-
+![Uploading image.png…]()
 
 
 ### 1. 说明（截图里的“说明*”输入框）
