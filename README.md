@@ -16,11 +16,11 @@
 - 🎨 **现代UI**: 美观的侧边栏界面,流畅的动画效果
 - 🚀 **一键使用**: 点击使用按钮直接复制并插入到输入框
 
+<img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/ea92ac05-34f1-48ed-b89f-0be81c4ee440" />
 
 
+<img width="1465" height="813" alt="image" src="https://github.com/user-attachments/assets/5117a17b-7748-4d6f-8255-2b599f6d1b07" />
 
-
-![Uploading image.png…]()
 
 
 ### 1. 说明（截图里的“说明*”输入框）
