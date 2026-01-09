@@ -1,6 +1,6 @@
-# 积木OnePrompt
+# OnePrompt
 
-一个浏览器扩展,提供通用提示词管理功能,支持快捷键弹窗、右键收藏、批量导入导出CSV等。**可在所有网页使用!**
+一个Chrome浏览器扩展,提供通用提示词管理功能,支持快捷键弹窗、右键收藏、变量替换等。**可在所有网页使用!**
 
 ## 功能特性
 
@@ -10,64 +10,137 @@
 - 📝 **提示词管理**: 增删改查提示词,支持分类和标签
 - 🔍 **快速搜索**: 实时搜索提示词标题、内容、分类和标签
 - 🏷️ **分类筛选**: 自动生成分类下拉框,快速筛选
-- 📥 **批量导入**: 支持CSV格式批量导入提示词
-- 📤 **批量导出**: 一键导出所有提示词为CSV文件
 - 📌 **固定侧边栏**: 可固定侧边栏,同时操作网页
 - 🎨 **现代UI**: 美观的侧边栏界面,流畅的动画效果
 - 🚀 **一键使用**: 点击使用按钮直接复制并插入到输入框
+- 🔄 **变量替换**: 支持变量替换功能,可自定义变量名和替换值
+- 💡 **智能采用**: 支持智能采用功能,自动添加系统提示和用户输入标识
+- 🎯 **UI优化**: 编辑提示词面板标签与输入框单行布局,简化标签文本
+- 📐 **统一风格**: 所有输入框使用直角,所有编辑面板弹窗使用圆角
+- 📏 **按钮统一**: 所有按钮大小统一,智能采用按钮使用蓝底样式
+- 📋 **CSV优化**: 变量列移到最后,方便导入导出
+- 🗑️ **简化界面**: 快速弹窗编辑面板移除"标题"和"类型",侧边栏移除"+创建"按钮
 
+## 安装方法
 
-<img width="1465" height="813" alt="image" src="https://github.com/user-attachments/assets/5117a17b-7748-4d6f-8255-2b599f6d1b07" />
+1. 下载或克隆此项目到本地
+2. 打开Chrome浏览器,访问 `chrome://extensions/`
+3. 打开右上角的"开发者模式"
+4. 点击"加载已解压的扩展程序"
+5. 选择本项目的文件夹
 
+## 使用方法
 
+### 基本操作
 
-### 1. 说明（截图里的“说明*”输入框）
+1. 在**任何网页**按 `Alt+Q` 打开提示词侧边栏
+2. 点击"打开提示词管理"按钮进入管理页面
+3. **右键收藏**: 选中文本 → 右键 → "收藏为提示词"
+4. 点击提示词卡片上的"使用"按钮直接复制并插入到输入框
+5. 点击📌按钮可固定侧边栏
 
-OnePrompt是一款高效的提示词管理工具，让你在豆包、ComfyUI、Claude、Gemini等任意AI平台无缝管理提示词：
+### 变量替换功能
 
-✅ 多平台兼容：跨AI工具同步保存/插入提示词
+1. 在提示词管理页面创建或编辑提示词
+2. 在"变量"输入框中输入变量，格式为 `{变量1},{变量2}`
+3. 在"内容"输入框中使用这些变量
+4. 点击"使用"按钮时，会弹出变量替换弹窗
+5. 输入变量值后，点击"确认替换"或"智能采用"按钮
+6. "智能采用"会自动添加系统提示和用户输入标识
+7. "采用"会直接使用原始内容，不添加额外标识
 
-✅ 便捷管理：一键保存、分类整理、搜索筛选，支持CSV导入导出
+### 快速弹窗使用
 
-✅ 快速操作：快捷键（默认Alt+Q/S）调面板、存提示词，支持自动插入/复制/二次编辑
+1. 选择输入框后按 `Alt+Q` 打开快速弹窗
+2. 选择提示词后点击"使用"按钮
+3. 支持变量替换和智能采用功能
 
-✅ 隐私安全：本地存储+零数据收集+开源代码
+### 支持的网站
 
-✅ 灵活搜索：多维度（分类/类型/标题）关键词/多类筛选搜索
+- ✅ 豆包 (doubao.com)
+- ✅ ChatGPT (chat.openai.com)
+- ✅ 文心一言 (yiyan.baidu.com)
+- ✅ 通义千问 (qianwen.aliyun.com)
+- ✅ 任何包含文本输入框的网页
+- ✅ 富文本编辑器(contenteditable)
 
-✅ 便捷创建：一键同步类型/分类，或从网页提取提示词
+## 快捷键
 
-使用方法：
-1. 点扩展图标开面板，导入/导出提示词建库
+- `Alt+Q`: 打开/关闭提示词弹窗
 
-2. 设快捷键（Alt+Q调面板、Alt+S存提示词）
-   
-3. 输入框按Alt+Q插提示词，网页未选输入框时Alt+Q调侧边栏
-   
-4. 主面板支持批量删/导，创建提示词可同步类型/分类
-   
-适用于AI爱好者、内容创作者、开发者、研究员等所有AI工具用户，让AI交互更高效！”
+可在 Chrome 扩展设置中自定义快捷键:
+`chrome://extensions/shortcuts`
 
-"OnePrompt is an efficient prompt management tool that lets you seamlessly organize prompts across AI platforms like Doubao, ComfyUI, Claude, Gemini, and more:
+## 变量替换规则
 
-✅ Cross-platform compatibility: Save/insert prompts synchronously across any AI tools
+1. 变量名必须用大括号包裹，例如: `{变量1}`
+2. 多个变量用逗号分隔，例如: `{变量1},{变量2}`
+3. 变量名不能包含大括号或逗号
+4. 变量替换弹窗会显示所有定义的变量
+5. 输入变量值后，会替换提示词中所有对应的变量
 
-✅ Convenient management: One-click save, category organization, search & filter, and CSV import/export support
+## 智能采用功能
 
-✅ Quick operations: Use shortcuts (default Alt+Q/S) to open panels, save prompts, with auto-insert/copy/secondary editing
+智能采用功能会在提示词前后自动添加以下标识:
+- 前置提示词后添加: `，## The following is System prompt: \n`
+- 后置提示词前添加: `\n## The following is user's input: \n`
 
-✅ Privacy-first: Local storage + zero data collection + open-source code
+## 界面说明
 
-✅ Flexible search: Multi-dimensional (category/type/title) keyword search or multi-category filter search
+### 主面板
 
-✅ Easy creation: Sync type/category when creating prompts, or extract prompts from webpages via shortcuts
+- **打开提示词管理**: 进入提示词管理页面
+- **使用说明**: 查看使用说明文档
 
-How to use:
+### 快速弹窗
 
-Click the extension icon to open the main panel, import/export prompts to build your library
+- **搜索框**: 搜索提示词
+- **类型筛选**: 按类型筛选提示词
+- **提示词列表**: 显示所有提示词
+- **编辑按钮**: 编辑提示词
+- **复制按钮**: 复制提示词内容
 
-Set shortcuts (Alt+Q to open panels, Alt+S to save prompts)
+### 编辑提示词面板
 
-Press Alt+Q in input boxes to insert prompts; press Alt+Q on webpages (no input box selected) to open the sidebar
+- **前缀**: 提示词前缀
+- **内容**: 提示词主体内容
+- **后缀**: 提示词后缀
+- **变量**: 定义变量，格式为 `{变量1},{变量2}`
+- **取消**: 取消编辑
+- **采用**: 直接使用原始内容
+- **智能采用**: 自动添加系统提示和用户输入标识
 
-The main panel supports batch delete/import/export; sync type/category when creating prompts
+## 项目结构
+
+```
+OnePrompt/
+├── manifest.json         # 扩展配置文件
+├── background.js         # 后台服务脚本
+├── content.js           # 内容脚本(核心功能)
+├── content.css          # 样式文件
+├── popup.html           # 点击图标弹出的主面板
+├── popup.js             # 主面板脚本
+├── help.html            # 使用说明页面
+└── README.md            # 说明文档
+```
+
+## 更新日志
+
+### v1.0.0
+
+- 初始版本发布
+- 支持快捷键弹窗
+- 支持右键收藏
+- 支持提示词管理
+- 支持变量替换
+- 支持智能采用功能
+- 支持快速弹窗
+- 支持全网页使用
+
+## 注意事项
+
+1. 首次使用需按 `Alt+Q` 打开提示词侧边栏
+2. 变量名必须用大括号包裹
+3. 智能采用功能会添加特定格式的标识
+4. 可在 Chrome 扩展设置中自定义快捷键
+5. 支持固定侧边栏，方便同时操作网页
