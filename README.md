@@ -2,12 +2,11 @@
 
 一个Chrome浏览器扩展,提供通用提示词管理功能,支持快捷键弹窗、右键收藏、变量替换等。**可在所有网页使用!**
 
+##安装
 
 Chrome 应用商店搜索： OnePrompt
 
-点击安装
-<img width="640" height="401" alt="image" src="https://github.com/user-attachments/assets/a5729348-045a-4b31-8c25-885e895ecf82" />
-
+<img width="1620" height="335" alt="image" src="https://github.com/user-attachments/assets/4d277779-0074-43a1-8015-1525af980599" />
 
 ## 功能特性
 
