@@ -1,5 +1,8 @@
 # OnePrompt
 
+
+<使用说明 src="https://github.com/cardenluo/OnePrompt/blob/main/OnePrompt%20-%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md" />
+
 一个Chrome浏览器扩展,提供通用提示词管理功能,支持快捷键弹窗、右键收藏、变量替换等。**可在所有网页使用!**
 
 ##安装
