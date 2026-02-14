@@ -1,5 +1,5 @@
 {
-  "latest_version": "3.0.0",
+  "latest_version": "4.1.0",
   "release_date": "2026-02-09",
   "changelog": [
     "添加了版本检查功能，可实时显示当前版本和最新版本",
@@ -11,4 +11,5 @@
   ]
 
 }
+
 
