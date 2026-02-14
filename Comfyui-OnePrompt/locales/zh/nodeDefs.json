@@ -1,0 +1,352 @@
+{
+
+
+
+  "file_CSVMapReader": {
+    "display_name": "file_CSV映射读取器",
+    "inputs": {
+      "csv_file_path": {
+        "name": "CSV文件路径"
+      },
+      "name_column": {
+        "name": "名称列"
+      },
+      "id_column": {
+        "name": "ID列"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "映射列表"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+  "file_XLSXMapReader": {
+    "display_name": "file_XLSX映射读取器",
+    "inputs": {
+      "xlsx_file_path": {
+        "name": "XLSX文件路径"
+      },
+      "name_column": {
+        "name": "名称列"
+      },
+      "id_column": {
+        "name": "ID列"
+      },
+      "sheet_name": {
+        "name": "工作表名称"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "映射列表"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+  "file_Rename_ByList": {
+    "display_name": "file_按列表重命名",
+    "inputs": {
+      "file_paths": {
+        "name": "文件路径"
+      },
+      "name_list": {
+        "name": "名称列表"
+      },
+      "target_directory": {
+        "name": "目标目录"
+      },
+      "keep_original_ext": {
+        "name": "保留原扩展名"
+      },
+      "overwrite": {
+        "name": "覆盖已存在"
+      },
+      "try_run": {
+        "name": "尝试运行"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "复制结果"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+  "csv_Std_Processor": {
+    "display_name": "csv_标准CSV处理器",
+    "inputs": {
+      "input_file": {
+        "name": "输入文件路径"
+      },
+      "output_file": {
+        "name": "输出文件路径"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "输出路径"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+  "file_Organizer": {
+    "display_name": "file_文件分类整理",
+    "inputs": {
+      "directory_path": {
+        "name": "目录路径"
+      },
+      "try_run": {
+        "name": "尝试运行"
+      },
+      "create_folders": {
+        "name": "创建文件夹"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "整理结果"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+  "file_MapRenamer": {
+    "display_name": "file_按映射重命名",
+    "inputs": {
+      "mapping_list": {
+        "name": "映射列表"
+      },
+      "directory_path": {
+        "name": "目录路径"
+      },
+      "file_extensions": {
+        "name": "文件扩展名"
+      },
+      "try_run": {
+        "name": "尝试运行"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "重命名结果"
+      },
+      "1": {
+        "name": "状态"
+      }
+    }
+  },
+
+  "file_AutoIndex_Rename": {
+    "display_name": "file_按编号重命名",
+    "inputs": {
+      "folder_path": {
+        "name": "文件夹路径"
+      },
+      "file_extensions": {
+        "name": "文件扩展名"
+      },
+      "file_keyword": {
+        "name": "文件关键字"
+      },
+      "sequence_digits": {
+        "name": "序号位数"
+      },
+      "custom_name": {
+        "name": "自定义命名"
+      },
+      "naming_format": {
+        "name": "命名格式"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "状态"
+      }
+    }
+  },
+  "file_LoadAnyFileList": {
+    "display_name": "file_加载文件列表",
+    "inputs": {
+      "folder_path": {
+        "name": "文件夹路径"
+      },
+      "custom_path": {
+        "name": "自定义路径"
+      },
+      "recursive": {
+        "name": "递归(含子文件)"
+      },
+      "output_file": {
+        "name": "输出文件类型"
+      },
+      "custom_output_file": {
+        "name": "自定义文件扩展名"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "单类文件"
+      },
+      "1": {
+        "name": "总文件信息"
+      },
+      "2": {
+        "name": "单类文件路径"
+      },
+      "3": {
+        "name": "单类文件名称"
+      }
+    }
+  },
+  "file_LoadZipFile": {
+    "display_name": "file_加载Zip文件",
+    "inputs": {
+      "zip_file": {
+        "name": "Zip文件"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "图像"
+      },
+      "1": {
+        "name": "视频"
+      },
+      "2": {
+        "name": "音频"
+      },
+      "3": {
+        "name": "文本"
+      },
+      "4": {
+        "name": "文件信息"
+      }
+    }
+  },
+  "file_AnyFileToZip": {
+    "display_name": "file_文件转Zip",
+    "inputs": {
+      "AnyFile_zip": {
+        "name": "文件转zip"
+      },
+      "file_info": {
+        "name": "文件信息"
+      }
+    },
+    "outputs": {}
+  },
+  "file_Split_FileInfo": {
+    "display_name": "file_拆分文件信息",
+    "inputs": {
+      "file_info": {
+        "name": "总文件信息"
+      },
+      "extensions": {
+        "name": "扩展名"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "单类文件信息"
+      },
+        "1": {
+        "name": "单类名称列表"
+      }
+    }
+  },
+  "file_FileInfo_Merge_Single": {
+    "display_name": "file_单类文件信息合并",
+    "inputs": {
+      "file_names_list": {
+        "name": "单类名称列表"
+      },
+      "extension": {
+        "name": "扩展名"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "文件信息"
+      }
+    }
+  },
+  "file_FileInfo_Merge_mul": {
+    "display_name": "file_多类文件信息合并",
+    "inputs": {
+      "file_info_1": {
+        "name": "文件信息1"
+      },
+      "file_info_2": {
+        "name": "文件信息2"
+      },
+      "file_info_3": {
+        "name": "文件信息3"
+      },
+      "file_info_4": {
+        "name": "文件信息4"
+      },
+      "extension": {
+        "name": "扩展名"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "合并文件信息"
+      }
+    }
+  },
+
+  "csv_read": {
+    "display_name": "csv_读取",
+    "inputs": {
+      "csv_path": {
+        "name": "CSV路径"
+      },
+      "row": {
+        "name": "行"
+      },
+      "column": {
+        "name": "列"
+      }
+    },
+    "outputs": {
+      "data": {
+        "name": "数据"
+      }
+    }
+  },
+  "csv_write_data": {
+    "display_name": "csv_写入数据",
+    "inputs": {
+      "csv_path": {
+        "name": "CSV路径"
+      },
+      "row": {
+        "name": "行"
+      },
+      "column": {
+        "name": "列"
+      },
+      "data": {
+        "name": "数据"
+      }
+    },
+    "outputs": {
+      "debug": {
+        "name": "调试"
+      }
+    }
+  }
+}
+
