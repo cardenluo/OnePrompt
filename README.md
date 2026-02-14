@@ -1,11 +1,11 @@
 # OnePrompt
 
 
-<使用说明 src="https://github.com/cardenluo/OnePrompt/blob/main/OnePrompt%20-%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md" />
+[使用说明](https://github.com/cardenluo/OnePrompt/blob/main/OnePrompt%20-%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)
 
-一个Chrome浏览器扩展,提供通用提示词管理功能,支持快捷键弹窗、右键收藏、变量替换等。**可在所有网页使用!**
+一个 Chrome 浏览器扩展，提供通用提示词管理功能，支持快捷键弹窗、右键收藏、变量替换等。**可在所有网页使用！**
 
-##安装
+## 安装
 
 Chrome 应用商店搜索： OnePrompt
 
@@ -13,16 +13,23 @@ Chrome 应用商店搜索： OnePrompt
 
 ## 功能特性
 
+一、全网页支持，三大功能
 
-- ⌨️ **快捷键支持**: 使用 `Alt+Q` 快速打开/关闭提示词侧边栏
-- 🌐 **全网页支持**: 在任何网页都可以使用
-- 🖱️ **右键收藏**: 选中文本后右键"收藏为提示词"
-- 📝 **提示词管理**: 增删改查提示词,支持分类和标签
-- 🔍 **快速搜索**: 实时搜索提示词标题、内容、分类和标签
+1）词卡弹窗应用--->插入或复制使用 ，支持预览图
+2）词库实时编辑
+3）快速收藏
 
-- 🚀 **一键使用**: 点击使用按钮直接复制并插入到输入框
-- 🔄 **变量替换**: 支持变量替换功能,可自定义变量名和替换值
+二、comfyui 支持，工作流批量生成
 
-- 🗑️ **简化界面**: 快速弹窗编辑面板移除"标题"和"类型",侧边栏移除"+创建"按钮
+<img width="2612" height="1423" alt="image" src="https://github.com/user-attachments/assets/0dc081a1-b685-4f5b-ad91-4cd8bb00d4e5" />
 
+
+三、实际使用
+
+comfyui、还有各大Ai绘画平台都能使用
+
+<img width="2781" height="1581" alt="image" src="https://github.com/user-attachments/assets/5f906c96-00fc-4218-8551-cab32175e8ff" />
+
+
+<img width="2781" height="1581" alt="image" src="https://github.com/user-attachments/assets/fe71cdd3-e6a3-4dc6-b250-e06792a7f003" />
 
