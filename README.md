@@ -13,16 +13,24 @@ Chrome 应用商店搜索： OnePrompt
 
 ## 功能特性
 
-一、全网页支持，三大功能
+一、三大功能
 
 1）词卡弹窗应用--->插入或复制使用 ，支持预览图
-2）词库实时编辑
-3）快速收藏
-
-二、comfyui 支持，工作流批量生成
 
 <img width="2612" height="1423" alt="image" src="https://github.com/user-attachments/assets/0dc081a1-b685-4f5b-ad91-4cd8bb00d4e5" />
 
+2）词库实时编辑：全面的词卡，实现词卡组装自由（后续继续增加）
+
+<img width="2622" height="1287" alt="image" src="https://github.com/user-attachments/assets/45d5179a-9539-4db7-81d3-eada1cceec9b" />
+
+3）快速收藏
+
+<img width="2361" height="1175" alt="image" src="https://github.com/user-attachments/assets/71c525d3-4e90-4a1b-829e-7377ab068789" />
+
+
+二、comfyui 支持，工作流批量生成
+
+插件已上传 ： Comfyui-OnePrompt 整个文件放在custom_nodes下面就可以
 
 三、实际使用
 
