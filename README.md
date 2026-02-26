@@ -30,7 +30,7 @@ Chrome 应用商店搜索： OnePrompt
 
 二、comfyui 支持，工作流批量生成
 
-插件已上传 ： Comfyui-OnePrompt 整个文件放在custom_nodes下面就可以
+[ComfyUI-OnePrompt](https://github.com/cardenluo/ComfyUI-OnePrompt.git)
 
 三、实际使用
 
