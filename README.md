@@ -19,10 +19,9 @@
 
 <img width="1060" height="547" alt="image" src="https://github.com/user-attachments/assets/e3c4b5f0-3c1c-4b58-8df0-8850f366a57c" />
 
-<img width="1620" height="335" alt="image" src="https://github.com/user-attachments/assets/4d277779-0074-43a1-8015-1525af980599" />
-
 
 ## 4.20  重要更新功能：
+
 1）ALT+s组装功能改成弹出功能
 
 2）词卡图片支持，不再限制大小和图片格式，同时还支持视频
@@ -46,7 +45,7 @@
 
 <img width="2612" height="1423" alt="image" src="https://github.com/user-attachments/assets/0dc081a1-b685-4f5b-ad91-4cd8bb00d4e5" />
 
-2）词库实时编辑：全面的词卡，实现词卡组装自由（后续继续增加）
+2）词库实时编辑：全面的词卡，实现词卡组装自由
 
 <img width="2622" height="1287" alt="image" src="https://github.com/user-attachments/assets/45d5179a-9539-4db7-81d3-eada1cceec9b" />
 
@@ -55,7 +54,7 @@
 <img width="2361" height="1175" alt="image" src="https://github.com/user-attachments/assets/71c525d3-4e90-4a1b-829e-7377ab068789" />
 
 
-二、comfyui 支持，工作流批量生成
+二、comfyui 支持，工作流批量生成的制作
 
 [ComfyUI-OnePrompt](https://github.com/cardenluo/ComfyUI-OnePrompt.git)
 
