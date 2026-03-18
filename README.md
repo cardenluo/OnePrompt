@@ -11,8 +11,9 @@
 
 应用商店搜索： OnePrompt
 
-edge:     https://microsoftedge.microsoft.com/addons/detail/oneprompt/cpfmjobpdbgojpgadecpajoehdhjohhb?hl=zh-CN
-Chrome:   https://chromewebstore.google.com/detail/oneprompt/fbgmpegcjfiefdmmfedggppgpfkolkej?utm_source=ext_sidebar&pli=1
+[edge](https://microsoftedge.microsoft.com/addons/detail/oneprompt/cpfmjobpdbgojpgadecpajoehdhjohhb?hl=zh-CN)
+
+[Chrome](https://chromewebstore.google.com/detail/oneprompt/fbgmpegcjfiefdmmfedggppgpfkolkej?utm_source=ext_sidebar&pli=1)
 
 其他浏览器：也可以在 “管理扩展程序”  找到 Chrome 应用商店，搜索下载
 
@@ -23,11 +24,17 @@ Chrome:   https://chromewebstore.google.com/detail/oneprompt/fbgmpegcjfiefdmmfed
 
 ## 4.20  重要更新功能：
 1）ALT+s组装功能改成弹出功能
+
 2）词卡图片支持，不再限制大小和图片格式，同时还支持视频
+
 3）词卡原插入功能，改成输入框锁定后插入。 增加“智”编辑
+
 4）快捷操作，词卡上的图片和文本都可以采用拖动或单击复制的方式。
+
 5）增加API管理模块，相关区域也增加了API调用的支持，可以自己配置调用功能
+
 6）API---> 视频助手，只要一个剧本，人人是编导
+
 7）组装词卡：增加变量模式，自定义变量，组装模式会变成灵活的变量组装方式
 
 
